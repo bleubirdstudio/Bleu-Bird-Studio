@@ -135,7 +135,7 @@
 	$(window).scroll(function () {
 	  var st = $(window).scrollTop();
 	  paint.css({'background-position':"50% "+(0-st/5)+"px"});
-	  words.css({'background-position':"50% "+(150-st/5)+"px"});
+	  words.css({'background-position':"50% "+(100-st/5)+"px"});
 	  feet.css({'background-position':"0 "+(600-st/5)+"px"});
 	});
 
@@ -180,6 +180,21 @@
 	              header.removeClass("fixed-nav-color").addClass("fixed-nav");
 	          }
 	      });
+	  });
+
+	  $(function() {
+	  	$('.one').hover(
+				function(){ $('.top').addClass('paint-one') },
+				function(){ $('.top').removeClass('paint-one') }
+	  	)
+	  	$('.two').hover(
+				function(){ $('.top').addClass('paint-two') },
+				function(){ $('.top').removeClass('paint-two') }
+	  	)
+	  	$('.three').hover(
+				function(){ $('.top').addClass('paint-three') },
+				function(){ $('.top').removeClass('paint-three') }
+	  	)
 	  });
 
 

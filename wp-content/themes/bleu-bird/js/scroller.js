@@ -29,8 +29,42 @@ $(window).scroll(function(event) {
   $(".text-in").each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-     el.addClass("fade-in"); 
+     el.addClass("bottom-up"); 
     } 
+    else{
+      el.removeClass("bottom-up");
+    }
+  });
+
+  $(".origami").each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+     el.addClass("bottom-up"); 
+    } 
+    else{
+      el.removeClass("bottom-up");
+    }
+  });
+
+  $(".origami:nth-of-type(2)").each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+     el.removeClass("bottom-up"); 
+     el.addClass("up-bottom"); 
+    } 
+    else{
+      el.removeClass("up-bottom");
+    }
+  });
+
+  $(".social").each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+     el.addClass("up-bottom-no-fade"); 
+    } 
+    else{
+      el.removeClass("up-bottom-no-fade");
+    }
   });
   
 });

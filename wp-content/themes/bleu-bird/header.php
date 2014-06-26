@@ -39,7 +39,7 @@
 </head>
 
 <body>
-<div class="container-fluid nav-section">
+<div class="container-fluid nav-section fixed-nav">
 	<div class="container">
 		<div class="row">
 			<nav class="main-navigation cl-effect-5" role="navigation">
@@ -56,6 +56,9 @@
 	</div>
 </div>
 <a name="home"></a>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
 <div class="top pone"><span class="ptwo"></span></div>
 <div class="header">
 	<a href="#who_we_are" class="scroll-bird"> 

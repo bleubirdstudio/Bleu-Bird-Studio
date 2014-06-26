@@ -79,7 +79,6 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="col-lg-10 col-md-10 col-sm-10 philos"><p>We understand how important your business is to you, after all we own a business too! <br> We strive to create and design a business personality that will emotionally connect your brand with your clients. We promise to give you an outstanding experience while helping you make your business what you always dreamed it would be.</p></div>
-			<div class="square"></div>
 		</div>
 		<a name="contact"></a>
 		<br><br><br>
@@ -116,11 +115,19 @@ get_header(); ?>
 					</div>
 					<a href="#" class="contact-bird"> 
 						<div class="bird"></div>
-						<div class="bubble"><span>hello<br>{{yourName}}</span></div>    
+						<div class="bubble"><span>hello,<br>{{yourName}}</span></div>    
 						<span class="small">let's talk!<br>click to submit</span>
 					</a>
 				</form>
 			</div>
+		</div>
+		<div class="row">
+			<ul class="social col-lg-11 col-md-11 col-sm-11 col-xs-11">
+				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#"></a></li>
+				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#"></a></li>
+				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#"></a></li>
+				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#"></a></li>
+			</ul>	
 		</div>
 	</div>
 <?php

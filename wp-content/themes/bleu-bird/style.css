@@ -1,41 +1,64 @@
 body, html { height: 100%; }
-body{ background: url('images/subtle_white_feathers.png') 0 0 fixed repeat; font-family: serif;}
+body{ font-family: serif;}
 a{ text-decoration: none; }
 .no-pad{ padding: 0;}
 .top{
   background: url('images/paint.png') 50% 0 fixed no-repeat; 
   background-size: 75%;
   width: 100%;
-  height: 103%;
+  height: 100%;
   display: inline-block;
-  margin-top: -55px;
-  -webkit-animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  -ms-animation: fadein 1s;
-  -o-animation: fadein 1s;
+  position: relative;
+  margin-top: -100%;
+  -webkit-animation: fadein 1s 1.25s;
+  -moz-animation: fadein 1s 1.25s;
+  -ms-animation: fadein 1s 1.25s;
+  -o-animation: fadein 1s 1.25s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.top span{
+  background: url('images/bleu_bird.png') 50% 100px fixed no-repeat;
+  background-size: 25%;
+  width: 100%;
+  height: 98%;
+  display: inline-block;
+  -webkit-animation: fadein 1s 1.5s;
+  -moz-animation: fadein 1s 1.5s;
+  -ms-animation: fadein 1s 1.5s;
+  -o-animation: fadein 1s 1.5s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.top span{
-  background: url('images/bleu_bird.png') 50% 150px fixed no-repeat;
-  background-size: 25%;
-  width: 100%;
-  height: 100%;
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten{
+  width: 33.333%;
+  height: 97%;
   display: inline-block;
-  -webkit-animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  -ms-animation: fadein 1s;
-  -o-animation: fadein 1s;
-  -webkit-animation-delay: .5s;
-  -moz-animation-delay: .5s;
-  -ms-animation-delay: .5s;
-  -o-animation-delay: .5s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
+  position: relative;
+  z-index: 100;
+  background: transparent;
+  margin: 0 -2px;
+  cursor: url('images/bird.png'), auto;
+}
+.paint-one{
+  background: url('images/paint.png') 50% 0 fixed no-repeat; 
+  background-size: 75%;
+}
+.paint-two{
+  background: url('images/paint-v2.png') 50% 0 fixed no-repeat; 
+  background-size: 75%;
+}
+.paint-three{
+  background: url('images/paint-v3.png') 50% 0 fixed no-repeat; 
+  background-size: 75%;
 }
 
 @keyframes fadeintop {
@@ -130,13 +153,16 @@ a{ text-decoration: none; }
 p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
 
 /* Navigation */
-.fixed-nav{ z-index: 1000; padding-bottom: 10px; width: 100%; }
+.fixed-nav{ z-index: 1000; padding-bottom: 10px; width: 100%; position: absolute;}
 .fixed-nav-color{ 
   background: rgba(250,250,250,.85); 
   position: fixed; z-index: 1000; padding-bottom: 10px; width: 100%;
   -webkit-animation: fadeintop .5s;
+  -moz-animation: fadeintop .5s;
+  -o-animation: fadeintop .5s;
+  -ms-animation: fadeintop .5s;
 }
-.header{ background: transparent; margin-top: -34px; }
+.header{ background: transparent; }
 .main-navigation{ text-align: center; position: relative; z-index: 2; margin-top: 20px; }
 .main-navigation ul{ display: inline-block; list-style: none; }
 .main-navigation ul li{ display: inline-block; margin-right: 60px; }
@@ -152,7 +178,7 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
 	margin-right: 30px;
   margin-top: -25px;
   position: relative;
-  z-index: 1;
+  z-index: 101;
   cursor: pointer;
   -webkit-transition: .45s cubic-bezier(1,-1.2,.35,2.75);
   -moz-transition: .45s cubic-bezier(1,-1.2,.35,2.75);
@@ -168,10 +194,10 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
 	display: inline-block;
 	background: url('images/bird.png');
 	float: right;
-  -webkit-animation: bird .5s .5s;
-  -moz-animation: bird .5s .5s;
-  -ms-animation: bird .5s .5s;
-  -o-animation: bird .5s .5s;
+  -webkit-animation: bird .5s 1.5s;
+  -moz-animation: bird .5s 1.5s;
+  -ms-animation: bird .5s 1.5s;
+  -o-animation: bird .5s 1.5s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -185,10 +211,10 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
 	background: url('images/bubble.png');
 	float: right;
 	margin: -53px -3px 0 0;
-  -webkit-animation: grow .5s .75s;
-  -moz-animation: grow .5s .75s;
-  -ms-animation: grow .5s .75s;
-  -o-animation: grow .5s .75s;
+  -webkit-animation: grow .5s 1.75s;
+  -moz-animation: grow .5s 1.75s;
+  -ms-animation: grow .5s 1.75s;
+  -o-animation: grow .5s 1.75s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -208,7 +234,8 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   border-top: 1px solid grey;
   background: white;
   position: relative;
-  z-index: 2; 
+  z-index: 102; 
+  margin-top: -9px;
 }
 /* hey there */
 .title{ margin-top: 20px; }
@@ -235,6 +262,27 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   -moz-animation: fadeinbottom 1.5s;
   -ms-animation: fadeinbottom 1.5s;
   -o-animation: fadeinbottom 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.bottom-up{
+  -webkit-animation: fadeinbottom 1.5s;
+  -moz-animation: fadeinbottom 1.5s;
+  -ms-animation: fadeinbottom 1.5s;
+  -o-animation: fadeinbottom 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.up-bottom{
+  -webkit-animation: fadeintop 1.5s;
+  -moz-animation: fadeintop 1.5s;
+  -ms-animation: fadeintop 1.5s;
+  -o-animation: fadeintop 1.5s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -340,7 +388,7 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
 .project-bird{
   float: left;
   width: 75%;
-  margin-bottom: -15px;
+  margin-bottom: 1px;
   position: relative;
   z-index: 7;
 }
@@ -351,7 +399,7 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   background: url('images/bird-reflect.png');
   float: left;
   position: relative;
-  z-index: 6;
+  z-index: 7;
 }
 
 .project-bird .bubble{
@@ -384,7 +432,7 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   border-top: 1px solid #7f7f7f;
   border-bottom: 1px solid #7f7f7f;
   position: relative;
-  z-index: 8;
+  z-index: 5;
   box-shadow: inset 1px 1px 25px black;
 }
 .feet:before{
@@ -516,19 +564,87 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   background: url('../bleu-bird/images/bird-bubble.png');
   background-size: 100%;
 }
-
-.square{
-  width: 200px;
+.social{
+  list-style: none;
+  margin-left: 85px;
   height: 200px;
-  background: black;
+  margin-top: -190px;
+}
+.social li{ overflow: hidden; height: 100%; }
+.social li a{
+  background: url('../bleu-bird/images/paint1.png');
+  width: 131px;
+  height: 136px;
+  background-size: 100%;
+  margin-right: 50px;
+  opacity: .75;
   display: inline-block;
-  -webkit-transition: 1s ease;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
   cursor: pointer;
 }
-.square:hover{
-  -webkit-transform: rotateY(180deg);
-  background: green;
+.up-bottom-no-fade li a:hover{
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  opacity: 1;
 }
+.social li:nth-of-type(2) a{
+  background: url('../bleu-bird/images/paint2.png');
+}
+.social li:nth-of-type(3) a{
+  background: url('../bleu-bird/images/paint3.png');
+}
+.social li:nth-of-type(4) a{
+  background: url('../bleu-bird/images/paint4.png');
+}
+.up-bottom-no-fade li a{
+  -webkit-animation: bottomnofade .5s;
+
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.up-bottom-no-fade li:nth-of-type(2) a{
+  -webkit-animation-delay: .2s; 
+}
+.up-bottom-no-fade li:nth-of-type(3) a{
+  -webkit-animation-delay: .3s; 
+}
+.up-bottom-no-fade li:nth-of-type(4) a{
+  -webkit-animation-delay: .4s; 
+}
+
+@keyframes bottomnofade {
+  0% { transform: translateY(250px); }
+  60% { transform: translateY(-10px); }
+  80% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+@-webkit-keyframes bottomnofade {
+  0% { -webkit-transform: translateY(250px); }
+  60% { -webkit-transform: translateY(-10px); }
+  80% { -webkit-transform: translateY(5px); }
+  100% { -webkit-transform: translateY(0); }
+}
+@-moz-keyframes bottomnofade {
+  0% { -moz-transform: translateY(250px); }
+  60% { -moz-transform: translateY(-10px); }
+  80% { -moz-transform: translateY(5px); }
+  100% { -moz-transform: translateY(0); }
+}
+@-o-keyframes bottomnofade {
+  0% { -o-transform: translateY(250px); }
+  60% { -o-transform: translateY(-10px); }
+  80% { -o-transform: translateY(5px); }
+  100% { -o-transform: translateY(0); }
+}
+
+
 
 /* nav effect */
 .cl-effect-5 ul li{
@@ -553,7 +669,6 @@ p{ font-size: 17px; color: grey; font-family: helvetica, sans-serif, arial;}
   top: 100%;
   content: attr(data-hover);
   width: 104%;
-  font-weight: 700;
   color: #66ccff;
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
